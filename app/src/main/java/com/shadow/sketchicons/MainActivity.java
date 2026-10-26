@@ -2,17 +2,35 @@ package com.shadow.sketchicons;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.content.Intent;
+import android.content.ActivityNotFoundException;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.view.Gravity;
+import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.ScrollView;
 import android.widget.GridLayout;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
     int dp(float v) { return (int)(v * getResources().getDisplayMetrics().density + .5f); }
+
+    private void applyToNiagara() {
+        Intent intent = new Intent("bitpit.launcher.APPLY_ICONS");
+        intent.setPackage("bitpit.launcher");
+        intent.putExtra("packageName", getPackageName());
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        try {
+            startActivity(intent);
+        } catch (ActivityNotFoundException e) {
+            Toast.makeText(this, "Open Niagara Launcher and choose Shadow Sketch from its icon settings.", Toast.LENGTH_LONG).show();
+        }
+    }
+
     @Override public void onCreate(Bundle b) {
         super.onCreate(b);
         getWindow().setStatusBarColor(Color.BLACK);
@@ -36,6 +54,17 @@ public class MainActivity extends Activity {
         note.setText("A rough sketch icon collection for a dark anime wallpaper. White pencil-like lines with restrained red marks. This app works offline and requests no permissions.");
         note.setTextColor(Color.rgb(205,205,205)); note.setTextSize(14);
         note.setLineSpacing(dp(3),1f); root.addView(note);
+
+        Button apply = new Button(this);
+        apply.setText("APPLY TO NIAGARA");
+        apply.setAllCaps(false);
+        apply.setTextColor(Color.WHITE);
+        apply.setBackgroundTintList(android.content.res.ColorStateList.valueOf(Color.rgb(150,28,28)));
+        LinearLayout.LayoutParams applyLp = new LinearLayout.LayoutParams(-1, dp(52));
+        applyLp.topMargin = dp(18);
+        root.addView(apply, applyLp);
+        apply.setOnClickListener(v -> applyToNiagara());
+
         TextView section = new TextView(this);
         section.setText("ICON PREVIEW"); section.setTextColor(Color.WHITE);
         section.setTypeface(Typeface.DEFAULT_BOLD); section.setTextSize(13);
@@ -54,7 +83,7 @@ public class MainActivity extends Activity {
             grid.addView(cell,lp);
         }
         TextView foot = new TextView(this);
-        foot.setText("NIAGARA NOTE\nThis build includes a visual preview and icon resources. Full launcher-pack recognition depends on Niagara's supported icon-pack format and still needs device testing.");
+        foot.setText("If Niagara does not open its icon picker, use Niagara Settings > Themes > Edit Current Theme > App icons. This pack is still being tested on-device.");
         foot.setTextColor(Color.rgb(175,175,175)); foot.setTextSize(12); foot.setLineSpacing(dp(3),1f);
         foot.setPadding(0,dp(22),0,0); root.addView(foot);
         setContentView(scroll);
