@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<item component="ComponentInfo{com.shadow.sketchicons/com.shadow.sketchicons.MainActivity}" drawable="ic_phone"/>
+<item component="ComponentInfo{com.shadow.sketchicons/com.shadow.sketchicons.MainActivity}" drawable="ic_messages"/>
+<item component="ComponentInfo{com.shadow.sketchicons/com.shadow.sketchicons.MainActivity}" drawable="ic_camera"/>
+<item component="ComponentInfo{com.shadow.sketchicons/com.shadow.sketchicons.MainActivity}" drawable="ic_chrome"/>
+<item component="ComponentInfo{com.shadow.sketchicons/com.shadow.sketchicons.MainActivity}" drawable="ic_youtube"/>
+<item component="ComponentInfo{com.shadow.sketchicons/com.shadow.sketchicons.MainActivity}" drawable="ic_instagram"/>
+<item component="ComponentInfo{com.shadow.sketchicons/com.shadow.sketchicons.MainActivity}" drawable="ic_settings"/>
+<item component="ComponentInfo{com.shadow.sketchicons/com.shadow.sketchicons.MainActivity}" drawable="ic_clock"/>
+<item component="ComponentInfo{com.shadow.sketchicons/com.shadow.sketchicons.MainActivity}" drawable="ic_files"/>
+<item component="ComponentInfo{com.shadow.sketchicons/com.shadow.sketchicons.MainActivity}" drawable="ic_contacts"/>
+<item component="ComponentInfo{com.shadow.sketchicons/com.shadow.sketchicons.MainActivity}" drawable="ic_google"/>
+<item component="ComponentInfo{com.shadow.sketchicons/com.shadow.sketchicons.MainActivity}" drawable="ic_gmail"/>
+<item component="ComponentInfo{com.shadow.sketchicons/com.shadow.sketchicons.MainActivity}" drawable="ic_github"/>
+<item component="ComponentInfo{com.shadow.sketchicons/com.shadow.sketchicons.MainActivity}" drawable="ic_playstore"/>
+<item component="ComponentInfo{com.shadow.sketchicons/com.shadow.sketchicons.MainActivity}" drawable="ic_chatgpt"/>
+<item component="ComponentInfo{com.shadow.sketchicons/com.shadow.sketchicons.MainActivity}" drawable="ic_music"/>
+<item component="ComponentInfo{com.shadow.sketchicons/com.shadow.sketchicons.MainActivity}" drawable="ic_whatsapp"/>
+<item component="ComponentInfo{com.shadow.sketchicons/com.shadow.sketchicons.MainActivity}" drawable="ic_vscode"/>
+</resources>
