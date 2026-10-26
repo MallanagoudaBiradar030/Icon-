@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<item component="ComponentInfo{com.shadow.sketchicons/com.shadow.sketchicons.MainActivity}" drawable="ic_phone"/>
-<item component="ComponentInfo{com.shadow.sketchicons/com.shadow.sketchicons.MainActivity}" drawable="ic_messages"/>
-<item component="ComponentInfo{com.shadow.sketchicons/com.shadow.sketchicons.MainActivity}" drawable="ic_camera"/>
-<item component="ComponentInfo{com.shadow.sketchicons/com.shadow.sketchicons.MainActivity}" drawable="ic_chrome"/>
-<item component="ComponentInfo{com.shadow.sketchicons/com.shadow.sketchicons.MainActivity}" drawable="ic_youtube"/>
-<item component="ComponentInfo{com.shadow.sketchicons/com.shadow.sketchicons.MainActivity}" drawable="ic_instagram"/>
-<item component="ComponentInfo{com.shadow.sketchicons/com.shadow.sketchicons.MainActivity}" drawable="ic_settings"/>
-<item component="ComponentInfo{com.shadow.sketchicons/com.shadow.sketchicons.MainActivity}" drawable="ic_clock"/>
-<item component="ComponentInfo{com.shadow.sketchicons/com.shadow.sketchicons.MainActivity}" drawable="ic_files"/>
-<item component="ComponentInfo{com.shadow.sketchicons/com.shadow.sketchicons.MainActivity}" drawable="ic_contacts"/>
-<item component="ComponentInfo{com.shadow.sketchicons/com.shadow.sketchicons.MainActivity}" drawable="ic_google"/>
-<item component="ComponentInfo{com.shadow.sketchicons/com.shadow.sketchicons.MainActivity}" drawable="ic_gmail"/>
-<item component="ComponentInfo{com.shadow.sketchicons/com.shadow.sketchicons.MainActivity}" drawable="ic_github"/>
-<item component="ComponentInfo{com.shadow.sketchicons/com.shadow.sketchicons.MainActivity}" drawable="ic_playstore"/>
-<item component="ComponentInfo{com.shadow.sketchicons/com.shadow.sketchicons.MainActivity}" drawable="ic_chatgpt"/>
-<item component="ComponentInfo{com.shadow.sketchicons/com.shadow.sketchicons.MainActivity}" drawable="ic_music"/>
-<item component="ComponentInfo{com.shadow.sketchicons/com.shadow.sketchicons.MainActivity}" drawable="ic_whatsapp"/>
-<item component="ComponentInfo{com.shadow.sketchicons/com.shadow.sketchicons.MainActivity}" drawable="ic_vscode"/>
+    <item component="ComponentInfo{com.google.android.dialer/com.google.android.dialer.extensions.GoogleDialtactsActivity}" drawable="ic_phone"/>
+    <item component="ComponentInfo{com.android.dialer/com.android.dialer.DialtactsActivity}" drawable="ic_phone"/>
+    <item component="ComponentInfo{com.google.android.apps.messaging/com.google.android.apps.messaging.ui.ConversationListActivity}" drawable="ic_messages"/>
+    <item component="ComponentInfo{com.whatsapp/com.whatsapp.HomeActivity}" drawable="ic_whatsapp"/>
+    <item component="ComponentInfo{com.instagram.android/com.instagram.mainactivity.MainActivity}" drawable="ic_instagram"/>
+    <item component="ComponentInfo{com.android.chrome/com.google.android.apps.chrome.Main}" drawable="ic_chrome"/>
+    <item component="ComponentInfo{com.google.android.youtube/com.google.android.youtube.HomeActivity}" drawable="ic_youtube"/>
+    <item component="ComponentInfo{com.google.android.gm/com.google.android.gm.ConversationListActivityGmail}" drawable="ic_gmail"/>
+    <item component="ComponentInfo{com.google.android.contacts/com.android.contacts.activities.PeopleActivity}" drawable="ic_contacts"/>
+    <item component="ComponentInfo{com.google.android.googlequicksearchbox/com.google.android.googlequicksearchbox.SearchActivity}" drawable="ic_google"/>
+    <item component="ComponentInfo{com.android.camera2/com.android.camera.CameraActivity}" drawable="ic_camera"/>
+    <item component="ComponentInfo{com.google.android.documentsui/com.android.documentsui.files.FilesActivity}" drawable="ic_files"/>
+    <item component="ComponentInfo{com.android.settings/com.android.settings.Settings}" drawable="ic_settings"/>
+    <item component="ComponentInfo{com.google.android.deskclock/com.android.deskclock.DeskClock}" drawable="ic_clock"/>
+    <item component="ComponentInfo{com.android.vending/com.google.android.finsky.activities.MainActivity}" drawable="ic_playstore"/>
+    <item component="ComponentInfo{com.openai.chatgpt/com.openai.chatgpt.MainActivity}" drawable="ic_chatgpt"/>
 </resources>
