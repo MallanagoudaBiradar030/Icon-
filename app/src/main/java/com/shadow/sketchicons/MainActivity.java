@@ -7,6 +7,9 @@ import android.graphics.Typeface;
 import android.view.Gravity;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.ScrollView;
+import android.widget.GridLayout;
+import android.widget.ImageView;
 
 public class MainActivity extends Activity {
     int dp(float v) { return (int)(v * getResources().getDisplayMetrics().density + .5f); }
@@ -14,28 +17,46 @@ public class MainActivity extends Activity {
         super.onCreate(b);
         getWindow().setStatusBarColor(Color.BLACK);
         getWindow().setNavigationBarColor(Color.BLACK);
+        ScrollView scroll = new ScrollView(this);
+        scroll.setBackgroundColor(Color.rgb(5,5,5));
         LinearLayout root = new LinearLayout(this);
         root.setOrientation(LinearLayout.VERTICAL);
-        root.setPadding(dp(24),dp(32),dp(24),dp(24));
-        root.setBackgroundColor(Color.rgb(5,5,5));
+        root.setPadding(dp(22),dp(28),dp(22),dp(24));
+        scroll.addView(root);
         TextView title = new TextView(this);
         title.setText("SHADOW SKETCH");
-        title.setTextColor(Color.WHITE); title.setTextSize(27);
+        title.setTextColor(Color.WHITE); title.setTextSize(26);
         title.setTypeface(Typeface.create("sans-serif-condensed",Typeface.BOLD));
         root.addView(title);
         TextView accent = new TextView(this);
-        accent.setText("HAND-DRAWN • MONOCHROME / RED");
+        accent.setText("HAND-DRAWN  •  MONOCHROME / RED");
         accent.setTextColor(Color.rgb(240,74,45)); accent.setTextSize(11);
-        accent.setPadding(0,dp(8),0,dp(22)); root.addView(accent);
-        TextView body = new TextView(this);
-        body.setText("A dark, sketch-inspired icon concept for your anime wallpaper.\n\nThis preview app is offline and requests no permissions.\n\nNext: add the icon-pack resources and validate Niagara's icon-pack support before using it as a launcher pack.");
-        body.setTextColor(Color.rgb(220,220,220)); body.setTextSize(15);
-        body.setLineSpacing(dp(5),1f); root.addView(body);
-        TextView sample = new TextView(this);
-        sample.setText("✎   ◉   ⌁   ⌂   ◇   ⚙");
-        sample.setTextColor(Color.WHITE); sample.setTextSize(28);
-        sample.setGravity(Gravity.CENTER); sample.setPadding(0,dp(36),0,dp(36));
-        root.addView(sample);
-        setContentView(root);
+        accent.setPadding(0,dp(6),0,dp(18)); root.addView(accent);
+        TextView note = new TextView(this);
+        note.setText("A rough sketch icon collection for a dark anime wallpaper. White pencil-like lines with restrained red marks. This app works offline and requests no permissions.");
+        note.setTextColor(Color.rgb(205,205,205)); note.setTextSize(14);
+        note.setLineSpacing(dp(3),1f); root.addView(note);
+        TextView section = new TextView(this);
+        section.setText("ICON PREVIEW"); section.setTextColor(Color.WHITE);
+        section.setTypeface(Typeface.DEFAULT_BOLD); section.setTextSize(13);
+        section.setPadding(0,dp(22),0,dp(8)); root.addView(section);
+        String[] names = {"Phone","Messages","Camera","Chrome","YouTube","Instagram","Settings","Clock","Files","Contacts","Google","Gmail","GitHub","Play Store","ChatGPT","Music","WhatsApp","VS Code"};
+        int[] ids = {R.drawable.ic_phone,R.drawable.ic_messages,R.drawable.ic_camera,R.drawable.ic_chrome,R.drawable.ic_youtube,R.drawable.ic_instagram,R.drawable.ic_settings,R.drawable.ic_clock,R.drawable.ic_files,R.drawable.ic_contacts,R.drawable.ic_google,R.drawable.ic_gmail,R.drawable.ic_github,R.drawable.ic_playstore,R.drawable.ic_chatgpt,R.drawable.ic_music,R.drawable.ic_whatsapp,R.drawable.ic_vscode};
+        GridLayout grid = new GridLayout(this); grid.setColumnCount(3); root.addView(grid);
+        for(int i=0;i<names.length;i++){
+            LinearLayout cell = new LinearLayout(this); cell.setOrientation(LinearLayout.VERTICAL); cell.setGravity(Gravity.CENTER);
+            cell.setPadding(dp(3),dp(10),dp(3),dp(10));
+            ImageView image = new ImageView(this); image.setImageResource(ids[i]);
+            cell.addView(image,new LinearLayout.LayoutParams(dp(56),dp(56)));
+            TextView label = new TextView(this); label.setText(names[i]); label.setTextColor(Color.rgb(210,210,210));
+            label.setTextSize(11); label.setGravity(Gravity.CENTER); label.setPadding(0,dp(5),0,0); cell.addView(label);
+            GridLayout.LayoutParams lp = new GridLayout.LayoutParams(); lp.width=0; lp.columnSpec=GridLayout.spec(GridLayout.UNDEFINED,1f);
+            grid.addView(cell,lp);
+        }
+        TextView foot = new TextView(this);
+        foot.setText("NIAGARA NOTE\nThis build includes a visual preview and icon resources. Full launcher-pack recognition depends on Niagara's supported icon-pack format and still needs device testing.");
+        foot.setTextColor(Color.rgb(175,175,175)); foot.setTextSize(12); foot.setLineSpacing(dp(3),1f);
+        foot.setPadding(0,dp(22),0,0); root.addView(foot);
+        setContentView(scroll);
     }
 }
